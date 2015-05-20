@@ -1,0 +1,268 @@
+// VARIABLES
+// --------------------------------------------------
+
+// font-weights
+@fw-light:     300;
+@fw-normal:    400;
+@fw-bold:      700;
+
+// spacing
+@space-smaller: 7.5px;
+@space-small: 15px;
+@space-medium: 30px;
+@space-large: 60px;
+@space-larger: 120px;
+
+// background colors
+@color-brand-white: rgb(255, 255, 255);
+@color-brand-grey--light: rgb(250, 250, 250);
+@color-brand-grey--medium: rgb(222, 222, 222);
+@color-brand-red: rgb(225, 81, 81);
+
+@color-brand-twitter: rgb(85, 172, 238);
+@color-brand-facebook: rgb(59, 89, 152);
+@color-brand-linkedin: rgb(9, 118, 180);
+@color-brand-github: rgb(102, 102, 102);
+
+// font colors
+@color-font-grey--light: rgb(182, 182, 182);
+@color-font-grey--medium: rgb(139, 139, 139);
+@color-font-grey--dark: rgb(57, 57, 57);
+
+// Globals
+// --------------------------------------------------
+
+a:link {
+	color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+body {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: @fw-normal;
+}
+
+// Perfect fourth
+// http://modularscale.com/scale/?px1=16&px2=14&ra1=1.333&ra2=0
+h1 { font-size: 37.897px; letter-spacing: 0.146px; }
+h2 { font-size: 33.160px; letter-spacing: 0.146px; }
+h3 { font-size: 28.430px; letter-spacing: 0.146px; }
+h4 { font-size: 24.876px; letter-spacing: 0.146px; }
+h5 { font-size: 21.328px; letter-spacing: 0.146px; }
+h6 { font-size: 18.662px; letter-spacing: 0.146px; }
+p  { font-size: 16px; line-height: 1.6; letter-spacing: .4px; }
+
+// Blocks
+// --------------------------------------------------
+
+.avatar {
+	width: 125px;
+	height: 125px;
+	border: 4px solid @color-brand-white;
+	margin: 0 auto @space-medium auto;
+	border-radius: 50%;
+}
+
+.container {
+	max-width: 850px;
+	margin: 0 auto;
+}
+
+.divider {
+	border-bottom: 1px solid @color-font-grey--light;
+	margin-top: @space-large;
+	width: 15%;
+}
+
+.splash,
+.about,
+.projects {
+	padding: @space-larger 0;
+}
+
+.splash,
+.about {
+	text-align: center;
+}
+
+.about {
+	background: @color-brand-grey--light;
+}
+
+.about-description {
+	color: @color-font-grey--dark;
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+.about-contact {
+	list-style-type: none;
+}
+
+.about-contact li {
+	color: @color-font-grey--medium;
+	display: inline-block;
+	font-size: 21.328px;
+	margin-right: @space-medium;
+	margin-top: @space-large;
+}
+
+.about-contact li:last-child {
+	margin-right: 0px;
+}
+
+.about-contact .fa-twitter:hover { color: @color-brand-twitter; }
+.about-contact .fa-github:hover { color: @color-brand-github; }
+.about-contact .fa-linkedin:hover { color: @color-brand-linkedin; }
+.about-contact .fa-envelope:hover { color: @color-brand-red; }
+
+.splash {
+	background: @color-brand-red;
+}
+
+.splash-name,
+.splash-type {
+	color: @color-brand-white;
+}
+
+.splash-type {
+	font-weight: @fw-normal;
+	margin-top: @space-smaller;
+}
+
+// Projects
+.projects {
+	background: @color-brand-white;
+}
+
+.projects-list {
+	list-style-type: none;
+}
+
+.projects-list li {
+	margin-bottom: @space-larger;
+}
+
+.project-name {
+	color: @color-font-grey--dark;
+	text-align: left;
+	font-weight: @fw-bold;
+	margin-bottom: @space-medium;
+}
+
+// Preview directive
+.project-background {
+	background: @color-brand-grey--light;
+	position: relative;
+	width: 100%;
+}
+
+.project-background h6 {
+	color: @color-font-grey--light;
+	line-height: 150px;
+	text-align: center;
+}
+
+.project-background:before {
+	content: "";
+	display: block;
+	padding-top: 55%;
+}
+
+.project-placeholder {
+	border-radius: 50%;
+	background: @color-brand-grey--medium;
+	height: 150px;
+	position: absolute;
+	margin: auto;
+	top: -25px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 150px;
+}
+
+.project-description {
+	margin-top: @space-medium;
+}
+
+.project-header {
+	box-sizing: border-box;
+	background: @color-brand-grey--medium;
+	height: 35px;
+	margin-top: @space-medium;
+	width: 100%;
+}
+
+.project-btn-list {
+	list-style-type: none;
+	text-align: left;
+}
+
+.project-btn-list > li {
+	border-radius: 50%;
+	background: rgb(255, 187, 58);
+	display: inline-block;
+	margin-top: @space-small;
+	margin-left: @space-small;
+	height: 12px;
+	width: 12px;
+}
+
+.project-btn-list > li:first-child {
+	background: rgb(253, 94, 88);
+}
+
+.project-btn-list > li:last-child {
+	background: rgb(53, 202, 73);
+}
+
+.project-img {
+	width: 100%;
+}
+
+.markdown {
+	pre {
+		box-sizing: border-box;
+		background: rgba(0, 0, 0, 0.03);
+		line-height: 25px;
+		padding: @space-medium;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: @color-font-grey--dark;
+		margin: @space-medium 0 @space-small 0;
+	}
+
+	pre, ul, ol {
+		margin: @space-medium 0;
+	}
+
+	pre, span, p, ul, ol { color: @color-font-grey--dark; }
+
+	p {
+		margin-bottom: @space-small;
+	}
+
+	ul li,
+	ol li {
+		margin-bottom: @space-smaller;
+	}
+
+	blockquote {
+		border-left: 2px solid @color-brand-grey--medium;
+		padding-left: @space-small;
+		font-style: italic;
+	}
+
+	img {
+		width: 100%;
+		margin-bottom: @space-medium;
+	}
+
+	text-align: left;
+}
